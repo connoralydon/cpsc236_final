@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7138878781213951822}
   - component: {fileID: 7138878781213951811}
   - component: {fileID: 7138878781213951810}
+  - component: {fileID: 2917030159110006082}
   m_Layer: 10
   m_Name: EnemyVertical
   m_TagString: Enemy
@@ -147,3 +148,22 @@ MonoBehaviour:
   floatingMax: 2
   floatingDir: 1.5
   bullet: {fileID: 6479908818607461110, guid: d8ab2a8a114eb4f11954ba04469eaea8, type: 3}
+--- !u!95 &2917030159110006082
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138878781213951820}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 073daa01dd3844cc98951e495d1f61e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

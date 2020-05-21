@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,10 +8,15 @@ using UnityEngine.UI;
 public class PlayerController2 : MonoBehaviour
 {
 
+
     public float speed;
     private Rigidbody2D rb;
+    bool leftToken = false;
+    bool rightToken = true;
 
-    public Animator animator;
+    public Animator animator1;
+    bool shootFlag = false;
+    bool shoot = false;
 
     public GameObject bullet;
 
@@ -33,18 +39,36 @@ public class PlayerController2 : MonoBehaviour
         Shoot();
 
         tmpScore = scoreText.GetComponent<ScoreController>().score;
+
+        //////////
+
+
     }
 
 
     void Shoot()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+ 
+       
+        if (Input.GetKeyDown(KeyCode.Space))
 		{
             GameObject.Instantiate(bullet, transform.position, transform.rotation); //bring in object at players ship
+
             scoreText.GetComponent<ScoreController>().score = tmpScore - 1;
             scoreText.GetComponent<ScoreController>().UpdateScore();
+
+            animator1.SetBool("isShooting", true);
         }
-	}
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator1.SetBool("isShooting", false);
+        }
+ 
+        
+    }
+
+
+
 
     void Move()
 	{
@@ -53,6 +77,24 @@ public class PlayerController2 : MonoBehaviour
 
         float moveX = x * speed;
         float moveY = y * speed;
+
+        if(moveX < 0 && !leftToken)
+        {
+            transform.Rotate(0f, 180f, 0f);
+            leftToken = true;
+            rightToken = false;
+
+            PlayerBullet.speed = PlayerBullet.speed * -1;
+        }
+        if (moveX > 0 && !rightToken)
+        {
+            transform.Rotate(0f, 180f, 0f);
+            rightToken = true;
+            leftToken = false;
+
+            PlayerBullet.speed = Math.Abs(PlayerBullet.speed);
+        }
+
 
         rb.velocity = new Vector2(moveX, moveY);
         
@@ -75,7 +117,11 @@ public class PlayerController2 : MonoBehaviour
         this.transform.position.z
         );
     }
+
+
 }
+
+
 
 
 

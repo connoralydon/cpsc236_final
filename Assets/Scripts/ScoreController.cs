@@ -8,7 +8,6 @@ public class ScoreController : MonoBehaviour
     public int score = 0;
     public int maxScore = 0;
 
-    private Text statText;
 
     private Text moneyText;
 
@@ -33,8 +32,8 @@ public class ScoreController : MonoBehaviour
         if (score > maxScore)
         {
             maxScore = score;
-            statText.GetComponent<StatController>().moneyCollected = maxScore;
-            statText.GetComponent<StatController>().UpdateStats();
+            moneyText.GetComponent<StatMoneyController>().moneyCollected = maxScore;
+            moneyText.GetComponent<StatMoneyController>().UpdateStats();
         }
             
 

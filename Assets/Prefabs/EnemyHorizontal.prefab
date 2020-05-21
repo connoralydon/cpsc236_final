@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5094103982891182484}
   - component: {fileID: 5094103982891182489}
   - component: {fileID: 2712153206289855668}
+  - component: {fileID: 2892211236160467991}
   m_Layer: 10
   m_Name: EnemyHorizontal
   m_TagString: Enemy
@@ -147,3 +148,22 @@ MonoBehaviour:
   floatingMax: 2
   floatingDir: 2
   bullet: {fileID: 6479908818607461110, guid: d8ab2a8a114eb4f11954ba04469eaea8, type: 3}
+--- !u!95 &2892211236160467991
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094103982891182486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63b544d1feac24fb9b3dd94719a5d5c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

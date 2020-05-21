@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class PlayerBullet : MonoBehaviour
 {
 
-    public float speed;
+    public static float speed = 17.5f;
     private Rigidbody2D rb;
 
     private Text scoreText;
     private Text killText;
     private int tmpScore;
     private int tmpKill;
-    private int healthCount = 3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class PlayerBullet : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
         scoreText = GameObject.Find("Score").GetComponent<Text>();
         killText = GameObject.Find("Kills").GetComponent<Text>();
+
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class PlayerBullet : MonoBehaviour
             Destroy(this.gameObject);
 
         tmpScore = scoreText.GetComponent<ScoreController>().score;
-        tmpKill = killText.GetComponent<StatController>().kills;
+        tmpKill = killText.GetComponent<StatKillController>().kills;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,30 +52,20 @@ public class PlayerBullet : MonoBehaviour
             scoreText.GetComponent<ScoreController>().score = tmpScore + 20;
             scoreText.GetComponent<ScoreController>().UpdateScore();
 
-            killText.GetComponent<StatController>().kills += tmpKill;// + 1;
-            killText.GetComponent<StatController>().UpdateStats();
+            killText.GetComponent<StatKillController>().kills += tmpKill;// + 1;
+            killText.GetComponent<StatKillController>().UpdateStats();
         }
         if (collision.gameObject.layer == 13)
         {
+            GameObject.Destroy(this.gameObject);
+            GameObject.Destroy(collision.gameObject);
 
-            if(healthCount > 0)
-            {
-                healthCount = healthCount -1;
-                GameObject.Destroy(this.gameObject);
-                Debug.Log(healthCount);
-            }
-            else if(healthCount <= 0)
-            {
-                GameObject.Destroy(this.gameObject);
-                GameObject.Destroy(collision.gameObject);
-                Debug.Log(healthCount);
+            scoreText.GetComponent<ScoreController>().score = tmpScore + 100;
+            scoreText.GetComponent<ScoreController>().UpdateScore();
 
-                scoreText.GetComponent<ScoreController>().score = tmpScore + 100;
-                scoreText.GetComponent<ScoreController>().UpdateScore();
+            killText.GetComponent<StatKillController>().kills = tmpKill + 1;
+            killText.GetComponent<StatKillController>().UpdateStats();
 
-                killText.GetComponent<StatController>().kills = tmpKill + 1;
-                killText.GetComponent<StatController>().UpdateStats();
-            }
             
         }
     }

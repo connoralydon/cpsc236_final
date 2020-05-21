@@ -481,6 +481,8 @@ GameObject:
   - component: {fileID: 1224603110}
   - component: {fileID: 1224603112}
   - component: {fileID: 1224603111}
+  - component: {fileID: 1224603114}
+  - component: {fileID: 1224603113}
   m_Layer: 5
   m_Name: Kills
   m_TagString: Untagged
@@ -547,6 +549,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224603109}
   m_CullTransparentMesh: 0
+--- !u!114 &1224603113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224603109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee9c813a3d3a49d8aaa35466265ac60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1224603114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224603109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6b27864d120421196d759b2a99c16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kills: 0
 --- !u!1 &1589492309
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +651,8 @@ GameObject:
   - component: {fileID: 1623863958}
   - component: {fileID: 1623863960}
   - component: {fileID: 1623863959}
+  - component: {fileID: 1623863961}
+  - component: {fileID: 1623863962}
   m_Layer: 5
   m_Name: BankAccount
   m_TagString: Untagged
@@ -690,6 +719,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623863957}
   m_CullTransparentMesh: 0
+--- !u!114 &1623863961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623863957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee9c813a3d3a49d8aaa35466265ac60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1623863962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623863957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995ff579e07054c938ff6fb73dc64999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyCollected: 0
 --- !u!1 &1962052368
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -266}
+  m_AnchoredPosition: {x: 0.000030517, y: -156}
   m_SizeDelta: {x: 300.4, y: 69.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962052370
