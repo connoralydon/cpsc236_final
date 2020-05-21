@@ -49,9 +49,9 @@ public class PlayerBullet : MonoBehaviour
             scoreText.GetComponent<ScoreController>().score = tmpScore + 20;
             scoreText.GetComponent<ScoreController>().UpdateScore();
 
-          
-            scoreText.GetComponent<ScoreController>().kills += 1;// + 1;
-            Debug.Log("kills" + scoreText.GetComponent<ScoreController>().kills);
+
+            ScoreController.kills += 1;// + 1;
+            Debug.Log("kills" + ScoreController.kills);
         }
         if (collision.gameObject.layer == 13)
         {
@@ -62,8 +62,8 @@ public class PlayerBullet : MonoBehaviour
             scoreText.GetComponent<ScoreController>().UpdateScore();
 
 
-            scoreText.GetComponent<ScoreController>().kills += 1;
-            Debug.Log("kills" + scoreText.GetComponent<ScoreController>().kills);
+            ScoreController.kills += 1;
+            Debug.Log("kills" + ScoreController.kills);
 
 
         }

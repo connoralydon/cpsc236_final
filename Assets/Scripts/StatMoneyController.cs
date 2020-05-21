@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class StatMoneyController : MonoBehaviour
 {
-    private Text scoreText;
+    //private Text scoreText;
     public int moneyCollected = 0;
 
     void Start()
     {
-        scoreText = GameObject.Find("Score").GetComponent<Text>();
-        moneyCollected = scoreText.GetComponent<ScoreController>().maxScore;
+        //scoreText = GameObject.Find("Score").GetComponent<Text>();
+        moneyCollected = ScoreController.maxScore;
         Debug.Log("money" + moneyCollected);
     }
 

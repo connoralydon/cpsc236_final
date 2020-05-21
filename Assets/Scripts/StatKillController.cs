@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class StatKillController : MonoBehaviour
 {
 
-    private Text scoreText;
+    //private Text scoreText;
     public int kills = 0;
 
     void Start()
     {
-        scoreText = GameObject.Find("Score").GetComponent<Text>();
-        kills = scoreText.GetComponent<ScoreController>().kills;
+        //scoreText = GameObject.Find("Score").GetComponent<Text>();
+        kills = ScoreController.kills;
         Debug.Log("kills" + kills);
     }
 
