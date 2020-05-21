@@ -6,14 +6,24 @@ using UnityEngine.UI;
 
 public class StatKillController : MonoBehaviour
 {
-    
 
+    private Text scoreText;
     public int kills = 0;
+
+    void Start()
+    {
+        scoreText = GameObject.Find("Score").GetComponent<Text>();
+        kills = scoreText.GetComponent<ScoreController>().kills;
+        Debug.Log("kills" + kills);
+    }
+
+
+
 
     public void UpdateStats()
     {
-        Debug.Log("updating kills");
-        kills = GetComponent<ScoreController>().kills;
+        //Debug.Log("updating kills");
+
         GetComponent<Text>().text = "Total Kills: " + kills;
 
     }
