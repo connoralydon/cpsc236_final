@@ -12,6 +12,8 @@ public class StatMoneyController : MonoBehaviour
 
     public void UpdateStats()
     {
+        Debug.Log("updating money");
+        moneyCollected = GetComponent<ScoreController>().maxScore;
         GetComponent<Text>().text = "Max Bank Account: $" + moneyCollected;
 
     }

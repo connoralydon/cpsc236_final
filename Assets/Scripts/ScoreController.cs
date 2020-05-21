@@ -8,14 +8,14 @@ public class ScoreController : MonoBehaviour
     public int score = 0;
     public int maxScore = 0;
 
+    public int kills = 0;
+    //private Text moneyText;
 
-    private Text moneyText;
 
-
-    void Start()
-    {
-        moneyText = GameObject.Find("Bank").GetComponent<Text>();
-    }
+    //void Start()
+    //{
+    //    moneyText = GameObject.Find("Bank").GetComponent<Text>(); ////YEET
+    //}
 
 
     public void UpdateScore()
@@ -32,7 +32,8 @@ public class ScoreController : MonoBehaviour
         if (score > maxScore)
         {
             maxScore = score;
-            moneyText.GetComponent<StatMoneyController>().moneyCollected = maxScore;
+            Debug.Log("max score" + maxScore);
+
         }
             
 

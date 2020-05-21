@@ -15,8 +15,7 @@ public class PlayerController2 : MonoBehaviour
     bool rightToken = true;
 
     public Animator animator1;
-    bool shootFlag = false;
-    bool shoot = false;
+
 
     public GameObject bullet;
 

@@ -12,7 +12,8 @@ public class StatKillController : MonoBehaviour
 
     public void UpdateStats()
     {
-        Debug.Log(kills);
+        Debug.Log("updating kills");
+        kills = GetComponent<ScoreController>().kills;
         GetComponent<Text>().text = "Total Kills: " + kills;
 
     }
