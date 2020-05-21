@@ -17,7 +17,6 @@ public class EnemyBullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-1*speed, 0);
-        //scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -41,8 +40,7 @@ public class EnemyBullet : MonoBehaviour
             GameObject.Destroy(this.gameObject);
             GameObject.Destroy(collision.gameObject);
             SceneManager.LoadScene("menu");
-            //scoreText.GetComponent<ScoreController>().score += 10;
-            //scoreText.GetComponent<ScoreController>().UpdateScore();
+
         }
     }
 }

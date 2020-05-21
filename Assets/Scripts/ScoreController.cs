@@ -14,7 +14,7 @@ public class ScoreController : MonoBehaviour
 
     void Start()
     {
-        moneyText = GameObject.Find("BankAccount").GetComponent<Text>();
+        moneyText = GameObject.Find("Bank").GetComponent<Text>();
     }
 
 
@@ -33,7 +33,6 @@ public class ScoreController : MonoBehaviour
         {
             maxScore = score;
             moneyText.GetComponent<StatMoneyController>().moneyCollected = maxScore;
-            moneyText.GetComponent<StatMoneyController>().UpdateStats();
         }
             
 

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneObjLoad : MonoBehaviour
+public class StatManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        GetComponent<StatMoneyController>().UpdateStats();
+        GetComponent<StatKillController>().UpdateStats();
     }
 
     // Update is called once per frame

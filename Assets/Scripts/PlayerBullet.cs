@@ -12,7 +12,7 @@ public class PlayerBullet : MonoBehaviour
     private Text scoreText;
     private Text killText;
     private int tmpScore;
-    private int tmpKill;
+    //private int tmpKill;
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class PlayerBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(speed, 0);
         scoreText = GameObject.Find("Score").GetComponent<Text>();
-        killText = GameObject.Find("Kills").GetComponent<Text>();
+        killText = GameObject.Find("Kill").GetComponent<Text>();
 
     }
 
@@ -33,7 +33,6 @@ public class PlayerBullet : MonoBehaviour
             Destroy(this.gameObject);
 
         tmpScore = scoreText.GetComponent<ScoreController>().score;
-        tmpKill = killText.GetComponent<StatKillController>().kills;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,8 +51,7 @@ public class PlayerBullet : MonoBehaviour
             scoreText.GetComponent<ScoreController>().score = tmpScore + 20;
             scoreText.GetComponent<ScoreController>().UpdateScore();
 
-            killText.GetComponent<StatKillController>().kills += tmpKill;// + 1;
-            killText.GetComponent<StatKillController>().UpdateStats();
+            killText.GetComponent<StatKillController>().kills += 1;// + 1;
         }
         if (collision.gameObject.layer == 13)
         {
@@ -63,10 +61,9 @@ public class PlayerBullet : MonoBehaviour
             scoreText.GetComponent<ScoreController>().score = tmpScore + 100;
             scoreText.GetComponent<ScoreController>().UpdateScore();
 
-            killText.GetComponent<StatKillController>().kills = tmpKill + 1;
-            killText.GetComponent<StatKillController>().UpdateStats();
+            killText.GetComponent<StatKillController>().kills += 1;
 
-            
+
         }
     }
 }

@@ -482,9 +482,8 @@ GameObject:
   - component: {fileID: 1224603112}
   - component: {fileID: 1224603111}
   - component: {fileID: 1224603114}
-  - component: {fileID: 1224603113}
   m_Layer: 5
-  m_Name: Kills
+  m_Name: Kill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,18 +548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224603109}
   m_CullTransparentMesh: 0
---- !u!114 &1224603113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224603109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee9c813a3d3a49d8aaa35466265ac60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1224603114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,9 +639,8 @@ GameObject:
   - component: {fileID: 1623863960}
   - component: {fileID: 1623863959}
   - component: {fileID: 1623863961}
-  - component: {fileID: 1623863962}
   m_Layer: 5
-  m_Name: BankAccount
+  m_Name: Bank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,19 +714,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623863957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee9c813a3d3a49d8aaa35466265ac60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1623863962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623863957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995ff579e07054c938ff6fb73dc64999, type: 3}
+  m_Script: {fileID: 11500000, guid: a043e3a0dc0584a69bbf92c7fc97e6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moneyCollected: 0
@@ -950,3 +924,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104030337}
   m_CullTransparentMesh: 0
+--- !u!1 &2132545990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132545991}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132545991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132545990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
